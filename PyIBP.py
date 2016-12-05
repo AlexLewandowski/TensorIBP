@@ -126,19 +126,6 @@ class PyIBP(object):
         if(self.sigma_xa != None):
             self.sampleSigma()
 
-    def logLike(self):
-        """
-        Calculate log-likelihood P(X,Z)
-        (or P(X,Z,V) if applicable)
-        """
-        liketerm = self.logPX(self.calcM(self.ZV),self.ZV)
-        ibpterm = self.logIBP()    
-        if(self.useV):
-            vterm = self.logPV()
-            return liketerm+ibpterm+vterm
-        else:
-            return liketerm+ibpterm
-
     def weights(self):
         """ Return E[A|X,Z] """
         return self.postA(self.X,self.ZV)[0]
@@ -407,7 +394,6 @@ class PyIBP(object):
     def sampleReport(self,sampleidx):
         """ Print IBP sample status """
         print 'iter %d' % sampleidx
-        print '\tcollapsed loglike = %f' % self.logLike()
         print '\tK = %d' % self.K
         print '\talpha = %f' % self.alpha
         print '\tsigma_x = %f' % self.sigma_x
