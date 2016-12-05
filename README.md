@@ -1,3 +1,7 @@
+Working on a tensor generalization of the infinite Infinite latent feature model.
+
+Credit for source:
+
 ## PYTHON IBP (PyIBP)
 
 David Andrzejewski (andrzeje@cs.wisc.edu) 
@@ -17,15 +21,6 @@ scheme [5].
 
 New features are sampled using a Metropolis-Hastings scheme [4].
 
-### EXAMPLE USAGE
-
-See ./example/example.py for example usage on a simple synthetic dataset
-consisting of latent factors with nice structure.  This dataset is
-derived from the one packaged with Finale Doshi-Velez's accelerated
-IBP code (http://people.csail.mit.edu/finale), but my understanding is
-that it originally appeared in earlier IBP work [2].
-
-This example also can be easily run with `make`.
 
 ### ACKNOWLEDGEMENTS
 
