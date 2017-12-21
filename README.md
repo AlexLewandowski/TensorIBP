@@ -1,4 +1,4 @@
-Working on a tensor generalization of the infinite Infinite latent feature model.
+WIP for tensor generalization of the infinite latent feature model.
 
 Credit for source:
 
